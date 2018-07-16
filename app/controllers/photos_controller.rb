@@ -20,7 +20,7 @@ class PhotosController < ApplicationController
       render  :action => :new
     end
   end
-  
+
   def update
     if @photo.update_attributes(photo_params)
       redirect_to photo_path(@photo)
