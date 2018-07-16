@@ -1,0 +1,9 @@
+<%= @photo.title %>
+<%= @photo.date %>
+
+<!-- 依我們在 console 裡載入的值，@photo.file_location 會輸出一組字串，表示圖片存放的位置，此路徑將對應到 public 資料夾
+File_location 裡的字串沒有包含根目錄符號，因此需要手動加上 "/" -->
+<%= image_tag @photo.file_location.url, size: "140x140", class: "img-thumbnail" %>
+<%= simple_format(@photo.description) %>
+
+<%= link_to 'Back to index', photos_path %>
